@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <script src="https://kit.fontawesome.com/65317eadaf.js" crossorigin="anonymous"></script>
+
+    <title>Heart Prediction</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+      <header>
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <p>Heart Prediction</p>
+                </div>
+
+
+                <ul class="nav-item">
+                    <li class="nav-items"><a href="/">Back to home<i class="fas fa-arrow-right"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+    <center>
+        <div class="main">
+            <h1>  PREDICTION   </h1>
+    <!--        <h3> {{data}}</h3>-->
+            {%if data[0] == 0%}
+            <h2>The Person does not have a Heart Disease</h2>
+    <!--        <p>You’re an extrovert who is always ready to go on adventures and explore the vast world and the opportunities. Your cooperative nature attracts people towards you and you can easily empathize with those around you. But due to a high level of neuroticism, you are susceptible to feeling various emotions all at once and lose your sense of responsibility leading to an imbalance in some areas of your life. Take a deep breath, get some meditation going on and focus on becoming more thoughtful and organizing your life. You can do it!</p>-->
+           <br>
+            <img src='static/images/healthy.jpg' alt="Chart" height="auto" width="100%">
+
+            {%elif data[0] == 1%}
+            <h2>The Person has a Heart Disease</h2>
+                <!--        <p>You’re an extrovert who is always ready to go on adventures and explore the vast world and the opportunities. Your cooperative nature attracts people towards you and you can easily empathize with those around you. But due to a high level of neuroticism, you are susceptible to feeling various emotions all at once and lose your sense of responsibility leading to an imbalance in some areas of your life. Take a deep breath, get some meditation going on and focus on becoming more thoughtful and organizing your life. You can do it!</p>-->
+            <img src='static/images/not-healthy.jpg' alt="Chart" height="auto" width="100%">
+
+
+            {%endif%}
+        </div>
+        <form >
+            <div class="main">
+            <h1>Enter your details to get your report
+            </h1>
+            <div class="row">
+                <div class="label">
+
+                    <label>Email address</label>
+                </div>
+                <div class="radio">
+                    <input type="email" name="email" placeholder="Eg. mail@example.com">
+                </div>
+            </div>
+            <br>
+                 <div class="row">
+                <div class="label">
+
+                    <label>Mobile number</label>
+                </div>
+                <div class="radio">
+                    <input type="number" name="mobile" placeholder="Eg. 9234567892">
+                </div>
+            </div>
+                 <br>
+            <button type="submit" class="btn">Submit</button>
+        </div>
+        </form>
+
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <script src="https://kit.fontawesome.com/65317eadaf.js" crossorigin="anonymous"></script>
+    <title>Heart Prediction</title>
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <p>Heart Prediction</p>
+            </div>
+
+            
+            <ul class="nav-item">
+                <li class="nav-items"><a href="/"><i class="fas fa-home"></i>Home</a></li>
+                <li class="nav-items"><a href="/quiz"><i class="fab fa-wpforms"></i>Quiz</a></li>
+                <li class="nav-items"><a href="/about"><i class="fas fa-clipboard-list"></i>About</a></li>
+            </ul>     
+        </nav>
+    </header>
+    <img src="static/images/chatbot.png" class="chatbot-img" onclick="openChatBot()" alt="bg hero image" class="hero-bg-image">
+    <div class="chatbot" id="bot">
+        <iframe  class="chatbot-hidden" src='https://webchat.botframework.com/embed/ccl-qna-maker-bot?s=8YZ0MooQu4o.n4zIICcYQYGm9HD7SSVn1gbtIOH5yxpRunlSlVQeXyA'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+    </div>
+        <main>
+        <section class="hero-home">
+            <div class="hero-bg-image-container">
+                <img src="static/images/heart-home.jpg" alt="bg hero image" class="hero-bg-image">
+            </div>
+           
+
+            <div class="hero-detail-home">
+                <h1 class="hero-title">Heart test</h1>
+                <p class="hero-description">According to the Centers for Disease Control and Prevention (CDC), heart disease is the leading cause of death in the United States. Around 1 in 4 deaths Trusted Source in the U.S. occur due to heart disease,
+                    and the condition affects all genders as well as all racial and ethnic groups.
+                      In this short article, we’ll be providing some information about the types, causes, and
+                    symptoms of heart disease. This article also covers risk factors and treatment, and after going through
+                    this article for precautionary purposes you can check if you might be suffering from heart disease.</p>
+            </div>
+            </section>
+
+<!--        Types-->
+         <section class="hero-home">
+             <div class="types-section">
+                <div>
+                    <img src="static/images/types.jpg" alt="bg hero image" class="hero-bg-image">
+                </div>
+                <div>
+                    <h2>Types of Heart Diseases:</h2>
+                       <ul>
+                            <li>Coronary artery disease</li>
+                            <li>Congenital heart defects</li>
+                            <li>Arrhythmia</li>
+                            <li>Dilated cardiomyopathy</li>
+                            <li>Myocardial infarction</li>
+                            <li>Heart failure</li>
+                            <li>Hypertrophic cardiomyopathy</li>
+                            <li>Mitral valve regurgitation</li>
+                            <li>Mitral valve prolapse</li>
+                            <li>Aortic stenosis</li>
+                        </ul>
+                </div>
+            </div>
+
+
+        </section>
+<!--        symtopms-->
+        <section class="hero-home">
+             <div class="types-section types-section-reverse">
+                <div>
+                    <img src="static/images/sym.png" alt="bg hero image" class="hero-bg-image">
+                </div>
+                <div>
+                    <h2>Symptoms of heart disease</h2>
+                    <h4>The symptoms of heart disease depend on the specific type
+                       <br> a person has. Also, some heart conditions cause no
+                        symptoms at all.
+</h4>
+                       <ul>
+                            <li>Angina, or chest pain</li>
+                            <li>Difficulty breathing
+                            <li>Fatigue and lightheadedness</li>
+                            <li>Swelling due to fluid retention, or edema</li>
+                            <li>In children, the symptoms of a congenital heart<br> defect may include cyanosis, a blue tinge</li>
+                            <li>Chest pain</li>
+                            <li>Breathlessness</li>
+                            <li>Heart palpitations</li>
+                            <li>Nausea</li>
+                            <li>Stomach pain</li>
+                            <li>Sweating</li>
+                            <li>Arm, jaw, back, or leg pain</li>
+                            <li>A choking sensation</li>
+                            <li>Swollen ankles</li>
+                            <li>Fatigue</li>
+                            <li>An irregular heartbeat</li>
+                        </ul>
+                </div>
+            </div>
+
+
+        </section>
+<!--        Treatment-->
+         <section class="hero-home">
+            <div class="types-section">
+                <div>
+                    <img src="static/images/treatment.jpg" alt="bg hero image" class="hero-bg-image">
+                </div>
+                <div>
+                    <h2>Treatment of heart disease</h2>
+                    <h4>The treatment options will vary depending on the type of heart
+                        <br>disease a person has, but some common strategies include
+                        <br>making lifestyle changes, taking medications, and undergoing
+                        <br>surgery. The following sections look at some of these options
+                        <br>in more detail.
+</h4>
+
+                    <h4>Medications:
+</h4>
+                       <ul>
+                            <li>Anticoagulants </li>
+                            <li>Antiplatelet therapies</li>
+                            <li>Angiotensin-converting enzyme inhibitors</li>
+                            <li>Angiotensin II receptor blockers</li>
+                            <li>Angiotensin receptor neprilysin inhibitors</li>
+                            <li>Beta-blockers</li>
+                            <li>Calcium channel blockers</li>
+                            <li>Cholesterol-lowering medications</li>
+                        </ul>
+
+                    <h4>Surgery:
+</h4>
+
+                    <ul>
+                        <li>Coronary artery bypass surgery</li>
+                        <li>Valve replacement or repair</li>
+                        <li>Repair surgery</li>
+                        <li>Device implantation</li>
+                        <li>Laser treatment</li>
+                    </ul>
+                </div>
+            </div>
+<!--prevention-->
+        </section>
+
+                <section class="hero-home ">
+             <div class="types-section types-section-reverse">
+                <div>
+                    <img src="static/images/prevention.jpg" alt="bg hero image" class="hero-bg-image">
+                </div>
+                <div>
+                    <h2>Prevention of heart disease</h2>
+                    <h4>Some lifestyle measures can help reduce the risk of heart disease.
+
+</h4>
+                       <ul>
+                            <li>Eating a balanced diet</li>
+<li>Exercising regularly</li>
+<li>Maintaining a moderate body weight</li>
+<li>Quitting or avoiding smoking</li>
+<li>Limiting alcohol intake</li>
+<li>Managing underlying conditions</li>
+
+                        </ul>
+
+                    <h4>Taking these steps can help boost overall health and
+                        <br>reduce the risk of heart disease and its complications.
+
+
+</h4>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+<script>
+function openChatBot() {
+  document.getElementById("bot").style.display = "block";
+}
+
+function closeChatBot() {
+  document.getElementById("bot").style.display = "none";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <script src="https://kit.fontawesome.com/65317eadaf.js" crossorigin="anonymous"></script>
+    <title>Heart Prediction</title>
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <p>Heart Prediction</p>
+            </div>
+
+
+            <ul class="nav-item">
+                <li class="nav-items"><a href="/"><i class="fas fa-home"></i>Home</a></li>
+                <li class="nav-items"><a href="/quiz"><i class="fab fa-wpforms"></i>Quiz</a></li>
+                <li class="nav-items"><a href="/about"><i class="fas fa-clipboard-list"></i>About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    </div>
+<!--        <form>-->
+            <form action="{{ url_for('predict')}}" method="post">             <div class="main">
+
+
+
+            <h1>For each statement choose/enter the response carefully:
+            </h1>
+            <!-- Age and gender -->
+            <div class="row">
+                <div class="label">
+                    <span>1</span>
+                    <label>Enter Your age</label>
+                </div>
+                <div class="radio">
+                    <input type="number" name="age" min ='14'>
+                </div>
+            </div>
+<br>
+            <div class="row">
+                <div class="label">
+                    <span>2</span>
+                    <label >Gender</label>
+                </div>
+                <div class="radio">
+                    <div>
+                       <input type="radio" name="gender"  value='1' id="g1">
+                       <label for="g1" >Male</label>
+                    </div>
+                    <div>
+                    <input type="radio" name="gender"  value='2'>
+                    <label >Female</label>
+                    </div>
+                    <div>
+                    <input type="radio" name="gender"  value='3'>
+                    <label >Others</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="label">
+                    <span>3</span>
+                    <label >Which type of chest pain?</label>
+                </div>
+                <div class="radio">
+                    <div><input type="radio" name="chestPain"  value='0'><label>0 : Typical angina</label></div>
+                    <div><input type="radio" name="chestPain"  value='1' ><label>1 : Atypical angina: Chest pain not related to heart</label></div>
+                    <div><input type="radio" name="chestPain"  value='2' ><label>2 : Non-Anginal pain: Typically, esophageal spasms (Non heart related)</label></div>
+                    <div><input type="radio" name="chestPain"  value='3' ><label>3 : Asymptomatic: Chest pain not showing signs of disease</label></div>
+                </div>
+            </div>
+                 <br>
+
+
+                 <div class="row">
+                <div class="label">
+                    <span>4</span>
+                    <label>‘trestbps’ - Resting blood pressure (in mm Hg on admission to the hospital)
+anything above 130-140 is typically cause for concern</label>
+                </div>
+                <div class="radio">
+                    <input type="number" name="trestbps" min ='94' max='200'>
+                </div>
+            </div>
+                 <br>
+
+                  <div class="row">
+                <div class="label">
+                    <span>5</span>
+                    <label>‘chol’ - Serum cholestoral in mg/dl</label>
+                </div>
+                <div class="radio">
+                    <input type="number" name="chol" min ='126' max='564'>
+                </div>
+            </div>
+                 <br>
+
+
+
+            <div class="row">
+                <div class="label">
+                    <span>6</span>
+                    <label >‘fbs’ - (fasting blood sugar > 120 mg/dl) </label>
+                </div>
+                <div class="radio">
+                    <div>
+                        <input type="radio" name="fbs"  value='0'>
+                        <label >0 : false</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="fbs"  value='1'>
+                        <label >1 : true</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+                 <div class="row">
+                <div class="label">
+                    <span>7</span>
+                    <label >Resting electrocardiographic results</label>
+                </div>
+                <div class="radio">
+                    <div>
+                        <input type="radio" name="electrocardiographic"  value='0'>
+                        <label >0</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="electrocardiographic"  value='1'>
+                        <label >1</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="electrocardiographic"  value='2'>
+                        <label >2</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+                   <div class="row">
+                <div class="label">
+                    <span>8</span>
+                    <label>Maximum heart rate achieved</label>
+                </div>
+                <div class="radio">
+                    <input type="number" name="heartRate" min ='71' max='202'>
+                </div>
+            </div>
+                 <br>
+
+
+                 <div class="row">
+                <div class="label">
+                    <span>9</span>
+                    <label >Exercise induced angina</label>
+                </div>
+                <div class="radio">
+                    <div>
+                        <input type="radio" name="angina"  value='0'>
+                        <label >0 : No</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="angina"  value='1'>
+                        <label >1 : Yes</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+                 <div class="row">
+                <div class="label">
+                    <span>10</span>
+                    <label>Oldpeak = ST depression induced by exercise relative to rest</label>
+                </div>
+                <div class="radio">
+                    <input type="number" name="oldpeak" min ='0' max='6.2' step="0.01">
+                </div>
+            </div>
+                 <br>
+
+                  <div class="row">
+                <div class="label">
+                    <span>11</span>
+                    <label >The slope of the peak exercise ST segment</label>
+                </div>
+                <div class="radio">
+                    <div>
+                        <input type="radio" name="ST"  value='0'>
+                        <label >0 : Up sloping: better heart rate with exercise (uncommon)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="ST"  value='1'>
+                        <label >1 : Flat sloping: minimal change (typical healthy heart)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="ST"  value='2'>
+                        <label >2 : Down sloping: signs of unhealthy heart</label>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+
+                  <div class="row">
+                <div class="label">
+                    <span>12</span>
+                    <label > Number of major vessels (0-3) colored by flourosopy</label>
+                </div>
+                <div class="radio">
+                    <div>
+                        <input type="radio" name="flourosopy"  value='0'>
+                        <label >0</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="flourosopy"  value='1'>
+                        <label >1</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="flourosopy"  value='2'>
+                        <label >2</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="flourosopy"  value='3'>
+                        <label >3</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+                  <div class="row">
+                <div class="label">
+                    <span>13</span>
+                    <label >  thal</label>
+                </div>
+                <div class="radio">
+                    <div>
+                        <input type="radio" name="thal"  value='0'>
+                        <label >0 : normal</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="thal"  value='1'>
+                        <label >1 : fixed defect</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="thal"  value='2'>
+                        <label >2 : reversable defect</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <button type="submit" class="btn">Submit</button>
+
+
+        </div>
+        </form>
+    </main>
+
+</body>
+</html>

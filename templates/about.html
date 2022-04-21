@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <script src="https://kit.fontawesome.com/65317eadaf.js" crossorigin="anonymous"></script>
+    <title>Heart Prediction</title>
+  
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <p>Heart Prediction</p>
+            </div>
+
+            
+            <ul class="nav-item">
+                <li class="nav-items"><a href="/"><i class="fas fa-home"></i>Home</a></li>
+                <li class="nav-items"><a href="/quiz"><i class="fab fa-wpforms"></i>Quiz</a></li>
+                <li class="nav-items"><a href="/about"><i class="fas fa-clipboard-list"></i>About</a></li>
+            </ul>     
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-about">
+            <div class="hero-bg-image-container">
+                <img src="static/images/heart-about.png">
+            </div>
+           
+
+            <div class="hero-detail-about">
+                 <p class="hero-description">In the current era, Heart Failure is one of the common diseases that can lead to dangerous situations.
+                    Every year almost 26 million patients are affected by this kind of disease. It is a serious condition with high prevalence
+                    (about 2% in the adult population in developed countries, and more than 8% in patients older than 75 years). About 3–5% of
+                    hospital admissions are linked with heart failure incidents. Heart failure is the first cause of admission by healthcare
+                    professionals in their clinical practice. The costs are very high, reaching up to 2% of the total health costs in developed
+                    countries. From the heart consultant and surgeon’s point of view, it is complex to predict heart failure at the right time.
+                    Building an effective disease management strategy requires analysis of a large amount of data, early detection of the disease,
+                    assessment of the severity, and early prediction of adverse events. This will inhibit the progression of the disease, will improve
+                    the quality of life of the patients, and will reduce the associated medical costs. Fortunately, classification and predicting models
+                    are there, which can aid the medical field and can illustrate how to use the medical data in an efficient way. For classification
+                    and efficient prediction, machine learning techniques have been employed. This system aims to help individuals predict if there are
+                    possibilities of heart diseases and provide further steps to take care of their heart health.</p>
+            </div>
+
+        </section>
+    </main>
+    
+</body>
+</html>
